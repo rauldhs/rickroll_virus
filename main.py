@@ -1,7 +1,6 @@
+from turtle import width
 import urllib.request
-import webbrowser
 from random import randint
-import os
 import pyglet
 
 gif = urllib.request.urlretrieve(
@@ -16,6 +15,11 @@ w = animSprite.width
 h = animSprite.height
 r,g,b,alpha = 0.5,0.5,0.5,0.5
 
+
+display = pyglet.canvas.Display()
+screen = display.get_default_screen()
+width = screen.width
+height = screen.height
 
 pyglet.gl.glClearColor(r,g,b,alpha)
 
@@ -42,7 +46,7 @@ class WindowsDraw():
     for window in range(0,4):
         window = pyglet.window.Window(width = w,height = h,resizable=True)
         x, y = window.get_location()
-        window.set_location(x + randint(0,1000), y + randint(0,1000))
+        window.set_location(x + randint(0,width), y + randint(0,height))
         @window.event
         def on_draw():  
             animSprite.draw()
