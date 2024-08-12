@@ -3,23 +3,24 @@
 A script that spams multiple windows with Rickroll GIFs.
 
 ## Installation
-### Executable
-1. Download the repository
-2. Go to dist/main.exe
-3. Run and enjoy the chaos :)
 
-### Python script
-1. Download the repository and go the script location.
+### Executable
+1. Go to [releases](https://github.com/rauldhs/rickroll_virus/releases).
+2. Download `rickroll.exe`.
+3. Run it and enjoy the chaos! 🎉
+
+### Python Script
+1. Clone the repository and navigate to the script location.
 2. Create a Python virtual environment:
     ```bash
     python -m venv rickroll_env
     ```
 3. Activate the virtual environment:
-    - On Windows:
+    - **Windows:**
       ```bash
       .\rickroll_env\Scripts\activate
       ```
-    - On macOS/Linux:
+    - **macOS/Linux:**
       ```bash
       source rickroll_env/bin/activate
       ```
@@ -27,7 +28,20 @@ A script that spams multiple windows with Rickroll GIFs.
     ```bash
     pip install -r requirements.txt
     ```
-5. Run the script and enjoy the chaos :) :
+5. Run the script:
     ```bash
     python main.py
+    ```
+6. Enjoy the chaos! 🎉
+
+### Building
+1. Clone the repository as described in the **Python Script** section.
+2. Navigate to the script location.
+3. Install PyInstaller:
+    ```bash
+    pip install pyinstaller
+    ```
+4. Build the executable:
+    ```bash
+    pyinstaller --onefile --noconsole --icon="rickroll_icon.ico" --add-data "rickroll.gif;." --hidden-import=pillow --hidden-import=requests rickroll.py
     ```
