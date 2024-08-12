@@ -2,6 +2,8 @@
 
 A script that spams multiple windows with Rickroll GIFs.
 
+![rickroll virus running](https://github.com/rauldhs/rickroll_virus/blob/master/rickroll_virus_running.png)
+
 ## Installation
 
 ### Executable
