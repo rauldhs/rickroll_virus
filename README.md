@@ -32,7 +32,7 @@ A script that spams multiple windows with Rickroll GIFs.
     ```
 5. Run the script:
     ```bash
-    python main.py
+    python rickroll.py
     ```
 6. Enjoy the chaos! 🎉
 
